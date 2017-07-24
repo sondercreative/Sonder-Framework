@@ -1,0 +1,1053 @@
+
+/*------------------------------------*\
+
+    MAIN
+
+	COLORS
+	Primary - <?php echo $pc;?>
+	Primary Dark - <?php echo $pd;?>
+	Primary Light - <?php echo $pl;?>
+	----
+	Secondary - <?php echo $sc;?>
+	Secondary Dark - <?php echo $sd;?>
+	Secondary Light - <?php echo $sl;?>
+	----
+	Tertiary - <?php echo $tc;?>
+	Tertiary Dark - <?php echo $td;?>
+	Tertiary Light - <?php echo $tl;?>
+
+	FONT FAMILIES
+	Header Font - <?php echo $font1;?>
+ 	Main Font - <?php echo $font2;?>
+
+\*------------------------------------*/
+
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+
+
+
+
+/*------------------------------------*\
+    Core Helpers
+\*------------------------------------*/
+
+
+.container img { max-width: 100%; height: auto; }
+
+#pageHead {
+    margin-bottom: 20px;
+}
+
+
+
+/*------------------------------------*\
+    Sticky Nav
+\*------------------------------------*/
+#navHead {
+   z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+  background-color:transparent;
+}
+
+#navHead .navBG{
+  height: 100%;
+  width: 100%;
+}
+
+#navHead .navBG .navContain,
+#navHead .navBG .navContain .row,
+#navHead .navBG .navContain .row .col,
+#navHead .navBG .navContain .row .col .navWrap,
+#navHead .navBG .navContain .row .col .navWrap > ul,
+#navHead .navBG .navContain .row .col .navWrap > ul > li,
+#navHead .navBG .navContain .row .col .navWrap > ul > li > a
+{
+  height: 100%;
+}
+
+.navContain .row .col {
+    height: 100%;
+    position: relative;
+    padding: 0;
+}
+
+#navHead.off-canvas {
+    position: fixed;
+    top: -115px;
+}
+
+#navHead.fixed {
+  position: fixed;
+}
+
+#navHead.fixed.off-canvas {
+  -webkit-transition: top 0.6s ease-in-out;
+  -moz-transition: top 0.6s ease-in-out;
+  transition: top 0.6s ease-in-out;
+  top: -65px; z-index: 9999;
+}
+
+#navHead.fixed.on-canvas {
+  -webkit-transition: top 0.6s ease-in-out;
+  -moz-transition: top 0.6s ease-in-out;
+  transition: top 0.6s ease-in-out;
+  top: 0; z-index: 9999;
+}
+
+.navWrap {
+  display: inline-block;
+  float: right;
+}
+
+#breadcrumbs li.separator {
+    padding: 0 4px;
+}
+#breadcrumbs li {
+    display: inline-block;
+}
+
+
+/*------------------------------------*\
+    Buttons and Arrows
+\*------------------------------------*/
+
+a.arw {
+    color: <?php echo $pc;?>;
+    font-family: <?php echo $font1;?>;
+    margin-right: 30px;
+}
+a.arw::after {
+    content: "\f3d3";
+    margin-left: 8px;
+    font-family: "Ionicons";
+    color: <?php echo $pc;?>;
+    font-size: 1.2em;
+    speak: none;
+    line-height: normal;
+    top: 2px;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+a.arw:hover {
+ color: <?php echo $p3;?>;
+}
+a.arw:hover:after {
+    margin-left: 12px;
+}
+p.lead {
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+.btn, .btn-large, .button-primary {
+    background-color: <?php echo $tc;?>;
+    color: #fff;
+    font-family:<?php echo $font1;?>;
+    text-transform: none;
+    font-size: .75em;
+    -moz-border-radius: 0;
+    padding: 0 9px;
+    height: auto;
+    line-height: 36px;
+    -webkit-border-radius: 0;
+    font-weight: 400;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+.btn:focus, .btn-large:focus, .btn-floating:focus {
+    background-color: <?php echo $t13;?>;
+}
+.btn.btn2 {
+    background: transparent;
+    border: 1px solid #999;
+    padding: 1px 19px;
+}
+.button-primary:hover {
+    background-color: <?php echo $pc;?>;
+    -webkit-box-shadow: none;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    none;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         none;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+.btn:hover, .btn-large:hover {
+    background-color: <?php echo $t12;?>;
+    color: #fff;
+    -webkit-box-shadow: none;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    none;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         none;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+
+
+
+/*---------------------------------------*\
+    Materialize / Visual Composer Resets
+\*---------------------------------------*/
+
+
+.wpb_column ul, .wpb_column ol {
+    padding-left: 17px;
+    margin-bottom: 15px!important;
+}
+.wpb_column ul ul, .wpb_column ol ol {
+    margin-top: 10px;
+}
+.wpb_column ul li {
+    list-style: disc outside none;
+    margin-bottom: 5px;
+}
+
+.wpb_column ol li {
+    list-style: decimal outside none;
+    margin-bottom: 5px;
+}
+
+.wpb_column ul li li {
+    list-style: circle outside none;
+}
+
+blockquote {
+    border-left: 5px solid <?php echo $pc;?>;
+}
+
+[type=radio]:checked, [type=radio]:not(:checked) {
+    position: relative;
+    left: 1px;
+    visibility: visible;
+}
+
+
+
+/*---------------------------------------*\
+    Main Containers / Wrappers
+\*---------------------------------------*/
+main {
+    overflow: hidden;
+}
+
+main > .container {
+    padding-top: 10px;
+}
+nav .nav-wrapper {
+
+}
+
+section {
+    margin-bottom: 3em;
+}
+
+article {
+  padding-right: 5%;
+}
+
+.mainHead {
+    padding-top: 65px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    Hamburger animation
+\*------------------------------------*/
+
+
+/*HAMBURGER*/ 
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger-box {
+  width: 27px;
+  height: 19px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 27px;
+  height: 2px;
+  background-color: ;<?php echo $p1;?>;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -7px;
+}
+.hamburger-inner::after {
+  bottom: -7px;
+}
+
+/* Spin */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin.is-active .hamburger-inner {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+  transition-delay: 0.14s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    NAVIGATION
+\*------------------------------------*/
+
+
+.navbar-fixed {
+    height: auto;
+    z-index: 997;
+}
+
+nav ul .sub-menu {
+    display: none;
+
+}
+nav ul a:hover{
+	background-color: <?php echo $pd;?>;
+	color:#fff;
+}
+nav #nav-desktop ul .sub-menu {
+    position: absolute;
+    background-color: <?php echo $pc;?>;
+    z-index: 9999;
+}
+nav #nav-desktop ul .sub-menu .sub-menu {
+    left: 100%;
+    top: 0;
+}
+nav #nav-desktop  ul.sub-menu li {
+    display: block;
+    float: none;
+    margin: 0;
+    min-width: 190px;
+    padding: 0;
+    line-height: normal;
+    position: relative;
+}
+nav #nav-desktop  ul.sub-menu li a {
+    padding: 15px;
+}
+
+nav #nav-desktop  ul .menu-item-has-children:hover > a {
+	background-color: <?php echo $pd ?>;
+}
+
+nav #nav-desktop ul .menu-item-has-children:hover > ul {
+	display: block;
+}
+
+.navigation nav.navbar-fixed{
+	position:fixed;
+}
+
+.navigation .searchIcon .search-close{
+	display:none;
+}
+
+.navigation .rightMain .socialNav{
+	display:inline-block;
+	float:left;
+}
+
+.navigation .mobileWrap{
+	height:100%;
+	width:75%;
+	float:left;
+}
+.navigation .mobileWrap ul.menu{
+    width: 100%;
+	position:relative;
+}
+.navigation ul.menu li{
+	float:none;
+	display:inline-block;
+}
+.navigation ul.menu li a{
+
+}
+.navigation ul.menu li div.sub-menu-wrap{
+	position: absolute;
+    overflow: hidden;
+    height: 0;
+	width:100%;
+}
+.navigation div.sub-menu-wrap ul.sub-menu{
+    width: 250px;
+    background-color: <?php echo $p13;?>;
+    text-align: left;
+    display: inline-block;
+}
+.navigation div.sub-menu-wrap ul.sub-menu li{
+	width:100%;
+	position:relative;
+}
+.navigation div.sub-menu-wrap ul.sub-menu li a:link,.navigation div.sub-menu-wrap ul.sub-menu li a:visited{
+	background:<?php echo $pd;?>;
+	border-bottom:1px solid <?php echo $pl;?>;
+}
+.navigation div.sub-menu-wrap ul.sub-menu li a:hover,.navigation div.sub-menu-wrap ul.sub-menu li a:active{
+	background:<?php echo $pc;?>;
+}
+.navigation div.sub-menu-wrap ul.sub-menu li div.sub-menu-wrap{
+	right:-250px;
+	top:0;
+}
+
+.navigation .searchWrap{
+	overflow:hidden;
+	position:absolute;
+    height: 67px;
+    right: 0;
+    width: 315px;
+	top:100%;
+	display:none;
+	background:<?php echo $pd;?>;
+}
+.navigation .searchWrap form{
+      padding-left: 17px;
+  display: inline-block;
+  line-height: normal;
+  float: left;
+  width: 100%;
+}
+.navigation .searchWrap form input[type='text'], .navigation .searchWrap input[type=text]:focus:not([readonly]){
+    background: transparent;
+    display: inline-block;
+    width: auto;
+    float: left;
+    margin: 0;
+    width: 220px;
+    padding: 0 10px;
+    height: 100%;
+    box-shadow: none;
+    border: none;
+}
+.navigation .searchWrap form button[type='submit']{
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 8px;
+    height: 100%;
+    width: 54px;
+}
+.navigation .searchWrap form button[type='submit'] i{
+	line-height:1em;
+	height:auto;
+
+}
+
+a#logo-container{
+
+}
+.mobile{
+	display:none !important;
+}
+.homeLink {
+    position: absolute;
+    padding: 8px 10px;
+    height: 100%;
+}
+
+.homeLink img {
+  height: 100%;
+  width: auto;
+  /* NEED A BETTER SOLUTION FOR THIS */
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+
+
+/*------------------------------------*\
+    Mobile / Side Nav
+\*------------------------------------*/
+.side-nav a {
+    height: 54px;
+    line-height: 54px;
+}
+.side-nav ul.mainMenu li {
+    padding: 0;
+    border-top: 1px solid #efefef;
+    position: relative;
+}
+.side-nav ul.mainMenu li a{
+    padding: 0 20px;
+}
+.side-nav ul.mainMenu li:hover, .side-nav ul.mainMenu li.active {
+    background-color: transparent;
+}
+.side-nav ul.mainMenu li a:hover, .side-nav ul.mainMenu li.active a {
+    background-color: #efefef;
+}
+.side-nav ul.mainMenu li.current_page_item > a{
+    background-color: #efefef;
+}
+.side-nav ul.mainMenu ul.sub-menu {
+    display: none;
+}
+
+.side-nav ul.mainMenu ul.sub-menu a {
+    height: 44px;
+    line-height: 44px;
+    font-size: .8rem;
+    padding-left: 31px;
+    color: #888;
+}
+.side-nav ul.mainMenu ul.sub-menu ul.sub-menu a {
+    padding-left: 50px;
+}
+
+
+.side-nav ul.mainMenu .current_page_parent > ul.sub-menu, .side-nav ul.mainMenu .current_page_ancestor > ul.sub-menu {
+    display: block;
+    width: 100%;
+}
+
+.side-nav .menu-item-has-children > .toggle {
+    position: absolute;
+    right: 3px;
+    top: 12px;
+}
+
+.side-nav .menu-item-has-children > .toggle:after {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    content: 'expand_more';
+    float: left;
+    padding: 5px;
+}
+.side-nav .menu-item-has-children > .toggle.opened:after {
+    content: 'expand_less';
+}
+.side-nav .menu-item-has-children .menu-item-has-children > .toggle {
+    top: 6px;
+}
+
+a {
+    color: <?php echo $pc;?>;
+}
+a:active, a:hover{
+	color:<?php echo $pd;?>;
+}
+
+
+.card .card-content .card-title {
+    line-height: normal;
+}
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    SEARCH
+\*------------------------------------*/
+
+#searchWrap {
+    background-color: <?php echo $pc;?>;
+	top: 63px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    display: none;
+
+}
+
+#searchToggle {
+    cursor: pointer;
+    float: right;
+    padding: 0 10px;
+}
+#searchToggle:hover {
+    background-color:<?php echo $pd ?>;
+}
+#searchToggle i {
+    font-size: 20px;
+}
+#searchToggle i.search-close {
+    display: none;
+}
+#searchToggle.open i.search-open {
+    display: none;
+}
+#searchToggle.open i.search-close {
+    display: block;
+}
+
+#searchWrap input#s {
+    background-color:<?php echo $pd ?>;
+    border: 0 none;
+    box-sizing: border-box;
+    float: left;
+    margin: 0;
+    padding: 5px 80px 5px 10px;
+    width: 100%;
+}
+
+#searchWrap input#s:focus {
+  -webkit-box-shadow: 0 0 2px #fff;
+  -moz-box-shadow:    0 0 2px #fff;
+  box-shadow:         0 0 2px #fff;
+}
+
+#searchWrap input#searchsubmit {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    height: 44px;
+    padding: 0 16px;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+}
+
+#searchWrap input#searchsubmit:hover {
+	color: #fff;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+	border-bottom: 1px solid <?php echo $pc;?>;
+    box-shadow: 0 1px 0 0 <?php echo $pc;?>;
+}
+
+.loginWrap input:not([type]):focus:not([readonly]), .loginWrap input[type=text]:focus:not([readonly]), .loginWrap input[type=password]:focus:not([readonly]), .loginWrap input[type=email]:focus:not([readonly]), .loginWrap input[type=url]:focus:not([readonly]), .loginWrap input[type=time]:focus:not([readonly]), .loginWrap input[type=date]:focus:not([readonly]), .loginWrap input[type=datetime-local]:focus:not([readonly]), .loginWrap input[type=tel]:focus:not([readonly]), .loginWrap input[type=number]:focus:not([readonly]), .loginWrap input[type=search]:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+
+
+
+
+
+
+
+
+/*---------------------------------------*\
+   Sidebar Children NAV for PAGE Template
+\*---------------------------------------*/
+
+.childnav_toggle {
+  display:none;
+  margin-bottom: 10px;
+}
+
+#content .childNav ul, #content .childNav ul li {
+    padding: 0;
+    margin: 0;
+}
+.childNav > ul {
+    padding: 0;
+}
+.childNav .page_item_has_children > a {
+    padding-right: 28px;
+}
+.childNav ul li {
+    font-size: 15px;
+    list-style: outside none none;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+}
+.childNav > ul > li > a {
+    display: inline-block;
+    padding: 11px 10px;
+    width: 100%;
+    position: relative;
+    color: #444;
+
+}
+.childNav > ul > li{
+  border-top: 1px solid #eef2f3;
+
+}
+.childNav .page_item .children {
+    display: none;
+    width: 100%;
+}
+.childNav .page_item > .children > li > a {
+    color: #999;
+    display: inline-block;
+    font-size: 14px;
+
+    width: 100%;
+}
+.childNav .page_item_has_children > .children > li > a:hover {
+   background-color: #f7f8f9;
+}
+.childNav .page_item > .children > li > .children > li > a {
+
+    font-size: 13px;
+}
+.childNav .page_item_has_children > .children > li > .children > li> a:hover {
+    background-color: transparent;
+    color: #cdac3c;
+}
+.childNav a:hover { text-decoration: none; }
+
+.submenu .subDrop{
+    cursor: pointer;
+    float: right;
+    font-size: 21px;
+    color: #000;
+    margin: -35px 15px 0px;
+}
+
+.childNav > .submenu > .page_item.current_page_item > a, .childNav > .submenu > .page_item.current_page_parent > a {
+    color: <?php echo $pc;?>
+}
+
+.childNav > .submenu > .page_item.current_page_item.page_item_has_children > a, .childNav > .submenu > .page_item.current_page_parent.page_item_has_children > a{
+
+}
+.page_item_has_children .toggle {
+    background: <?php echo $tl;?>;
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    font-size: 15px;
+    display: inline-block;
+    line-height: 31px;
+    color: #a1b1bc;
+}
+.page_item_has_children .toggle:after {
+    content: "expand_more";
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    position: absolute;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 1.7em;
+}
+.page_item_has_children .toggle.opened:after {
+      content: "expand_less"
+}
+
+.childNav .submenu .page_item.current_page_parent .children .page_item.current_page_item > a {
+    color: #fc4513;
+}
+
+.childNav .submenu .page_item.current_page_parent .children a:hover {
+    color: #47c1ff;
+}
+
+.childNav .page_item.current_page_item > .children,
+.childNav .page_item.current_page_parent > .children,
+.childNav .page_item.current_page_ancestor > .children {
+    display: block;
+}
+
+.childNav .page_item .glyphicon.glyphicon-menu-right {
+    color: #999;
+    font-size: 10px;
+    position: absolute;
+    right: 13px;
+    top: 39%;
+}
+
+.childNav .page_item.current_page_parent > a > span.glyphicon.glyphicon-menu-right::before {
+    content: '';
+}
+
+
+
+
+
+
+/*------------------------------------*\
+   FOOTER
+\*------------------------------------*/
+
+section.prefoot {
+  background:<?php echo $pc;?>;
+  color: #fff;
+  margin:0;
+  padding: 50px 0;
+}
+section.prefoot h3, section.prefoot h4 {
+  color: #fff;
+}
+footer.page-footer{
+	background:<?php echo $tc;?>;
+  margin-top: 0;
+}
+footer.page-footer, footer.page-footer a {
+    color: #fff;
+    font-size: .9em;
+}
+footer.page-footer h3 {
+    font-size: 2em;
+}
+
+footer.page-footer .social-links {
+    text-align: right;
+}
+footer .secondary-footer {
+    background-color: <?php echo $pd?>;
+}
+
+
+
+
+
+
+
+/*------------------------------------*\
+   CORE - Media Queries
+\*------------------------------------*/
+
+@media screen and (min-width:993px) {
+
+}
+
+
+@media screen and (max-width:992px) {
+
+	.navigation .mobile{
+		display:block !important;
+	}
+	.navigation .nav-actiavator {
+		width: 12%;
+		float: right;
+		line-height: 100%;
+		text-align:right;
+	}
+	.navigation .mobileWrap{
+		height:0;
+		overflow:hidden;
+		width:100%;
+		position:absolute;
+		top:100%;
+		left:0;
+	}
+	.navigation .mobileWrap ul.menu li{
+		position:relative;
+		display:block;
+	}
+	.navigation .mobileWrap ul.menu li a{
+
+		padding:0 45px 0 15px;
+	}
+	.navigation ul.menu li div.sub-menu-wrap{
+		position:relative;
+	}
+	.navigation div.sub-menu-wrap ul.sub-menu{
+	text-align: left;
+    float: left;
+    width: 100%;
+	}
+	.navigation div.sub-menu-wrap ul.sub-menu li div.sub-menu-wrap{
+		left:0;
+	}
+	.navigation .mobileWrap  ul.menu li.menu-item-has-children a{
+		padding: 0 45px 0 15px;
+	}
+	.navigation div.sub-menu-wrap ul.sub-menu li a:link, .navigation div.sub-menu-wrap ul.sub-menu li a:visited{
+
+	}
+	.navigation .mobileWrap  ul.menu li div.sub-toggle{
+        width: 30px;
+        height: 53px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+	}
+  .navigation .mobileWrap  ul.menu li .sub-menu-wrap div.sub-toggle{
+      height: 38px;
+  }
+	.navigation ul.menu li a:active,.navigation ul.menu li a:hover{
+		background:<?php echo $pc;?>;
+	}
+	.hamburger:focus{
+		background:none;
+	}
+	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+		background-color:<?php echo $p1;?>;
+	}
+
+}
+
+
+
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
+
+
+
+

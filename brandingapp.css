@@ -1,0 +1,481 @@
+
+
+
+
+/*-----------------------------
+
+	Branding App Generic Styles
+
+--------------------------------*/
+.clearfix {
+	clear: both;
+}
+
+h2 , h3, h4 {
+    font-family: 'Gibson';
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h2 {
+	font-size: 2.2em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+ 	font-size: 1.2em;
+ }
+
+ p {
+ 	font-family: 'Gibson';
+    font-weight: 300;
+    font-size: 0.8em;
+    line-height: 1.5em;
+ }
+
+ p strong {
+ 	font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-top: 0;
+ }
+
+ a {
+ 	color: #8bc7ea;
+ 	transition: .2s opacity ease;
+ }
+ a:hover {
+ 	color: #8bc7ea;
+ 	opacity: 0.6;
+ 	transition: .2s opacity ease;
+ }
+
+ .container {
+ 	width: 80%;
+ }
+
+ div.vc_column-inner {
+ 	padding-top: 0px !important;
+ }
+
+
+/*-----------------------------
+
+	Branding App Side Nav
+
+--------------------------------*/
+.show-nav {
+	left: 0 !important;
+	transition: .2s all ease;
+}
+
+.slide-over {
+	right: 0;
+	left: auto;
+	transition: .2s all ease;
+}
+
+
+
+.slide-over-con .hamburger {
+	left: 0px;
+}
+
+.hamburger {
+	transition: .2s all ease;
+	position: absolute;
+	left: -40px;
+	top: -25px;
+}
+
+
+div.slide-over-con {
+  	right: 0;
+	left: auto;
+	border-right: 40px solid #fff;
+	border-left: 0px solid #fff;
+	position: fixed;
+}
+
+.button-container {
+	width: 0; 
+  	height: 0; 
+  	border-top: 45px solid transparent;
+  	border-bottom: 45px solid transparent;
+  	border-left: 30px solid #fff;
+  	position: fixed;
+  	top: 30px;
+  	z-index: 999;
+  	transition: .2s border-color ease;
+}
+.scrolling {
+	border-top: 45px solid transparent ;
+  	border-bottom: 45px solid transparent ;
+  	border-left: 30px solid #a2a4a5 ;
+  	transition: .2s border-color ease;
+}
+
+
+.slide-over-con .hamburger-inner, .slide-over-con .hamburger-inner::before, .slide-over-con .hamburger-inner::after {
+	background-color: #000 !important ;
+	transition: .2s background-color ease;
+}
+
+
+
+.scrolling .hamburger-inner, .scrolling .hamburger-inner::before, .scrolling .hamburger-inner::after {
+	background-color: #fff ;
+}
+
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	background-color: #000;
+	height: 2px;
+	width: 15px;
+}
+
+.hamburger-box {
+    width: 30px;
+    height: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner::after {
+    bottom: -5px;
+}
+
+.hamburger-inner::before {
+    top: -5px;
+}
+
+.branding-head-logo {
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding-right: 20px;
+	padding-left: 20px;
+	
+}
+
+.branding-head-logo:after {
+	content: "";
+	position: relative;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 100%;
+	height: 1px;
+	background: #b9b9b9;
+	display: block;
+	margin-top: 2em;
+
+}
+
+.navigation-menu h4 {
+	font-size: 1.1em;
+}
+
+.menu-heading {
+	font-weight: bold;
+}
+
+.menu-heading h4 {
+	font-size: 1em;
+}
+
+.side-nav li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.sub-menu {
+	padding-left: 20px;
+}
+
+.sub-menu li {
+	line-height: 1.5em;
+}
+
+.sub-menu li:hover {
+	background: #fff;
+}
+
+.sub-menu a {
+	line-height: 1.5em;
+	height: auto;
+}
+
+.navigation-menu .sub-menu {
+	display: none;
+}
+
+
+
+
+
+/*-----------------------------
+
+	Branding App Main Content
+
+--------------------------------*/
+main {
+	/*display: inline-block;*/
+	/*width: 80%;*/
+	/*float: right;*/
+}
+.introduction-brandstandards{
+	background: #e6e7e8;
+}
+.introduction p{
+	font-size: 1em;
+}
+.brand-standards {
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 2em;
+	padding-top: 2em;
+}
+.brand-standards h2 {
+	/*margin-bottom: 0;*/
+	color: #fff;
+	font-size: 3em;
+}
+.brand-standards a {
+	/*position: absolute;
+	bottom: 0;
+	right: 0;*/
+	font-family: 'Gibson' ;
+	color: #000;
+	font-weight: 300;
+}
+
+.brand-sections .brand-section-header  {
+	background: #e6e7e8;
+	margin-bottom: 6%;
+}
+
+.brand-sections .brand-section-header h2 {
+	line-height: 1.5em;
+	font-size: 2em;
+}
+
+.brand-sub-section {
+	border-top: 1px solid #e6e7e8;
+	padding-top: 4%;
+	margin-bottom: 4%;
+}
+
+footer {
+	text-align: center;
+	background: #e6e7e8; 
+}
+
+footer .legal-header h2 {
+	line-height: 2em;
+	font-size: 2.5em;
+}
+
+footer .legal-content {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+footer .legal-content p{
+	width: 90%;
+	display: inline-block;
+}
+
+footer .legal-content p strong {
+	font-size: 1.1em;
+}
+
+footer .legal-content p:first-child{
+	font-size: 1.1em;
+}
+
+footer .legal-content img {
+	display: block;
+	margin: 0 auto;
+	margin-top: 2%;
+}
+
+footer .trade-mark {
+	height: 100px;
+	text-align: color
+}
+
+footer .trade-mark p {
+	width: 80%;
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: 400px) {
+
+	.hamburger {
+		transition: .2s all ease;
+		position: absolute;
+		left: -40px;
+		top: -25px;
+	}
+	.button-container {
+		    border-top: 50px solid transparent;
+		    border-bottom: 50px solid transparent;
+		    border-left: 35px solid #fff;
+		    position: fixed;
+		    top: 30px;
+		    z-index: 999;
+		    transition: .2s border-color ease;
+	}
+	.scrolling {
+		border-top: 50px solid transparent ;
+	  	border-bottom: 50px solid transparent ;
+	  	border-left: 35px solid #a2a4a5 ;
+	  	transition: .2s border-color ease;
+	}
+	
+}
+
+@media only screen and (min-width: 550px) {
+		.brand-standards h2 {
+			/*margin-bottom: 0;*/
+			color: #fff;
+			font-size: 2.8em;
+			width: 49%;
+			display: inline-block;
+		}
+
+		.right-aligns{
+			width: 49%;
+			text-align: right;
+			display: inline-block;
+		}
+
+
+}
+
+@media only screen and (min-width: 850px) {
+		.brand-standards h2 {
+			/*margin-bottom: 0;*/
+			color: #fff;
+			width: auto;
+			display: inline-block;
+		}
+		
+
+}
+
+@media only screen and (min-width: 992px) {
+		 p {
+		 	font-family: 'Gibson';
+		    font-weight: 300;
+		    font-size: 0.9em;
+		    line-height: 1.5em;
+		 }
+
+		 p strong {
+		 	font-weight: 700;
+		    font-size: 0.9em;
+		    text-transform: uppercase;
+		 }
+		main {
+			display: inline-block;
+			width: 75%;
+			float: right;
+		}
+
+		main .container {
+			width: 80%;
+		}
+
+		.vc_row{
+		 	margin-top: 3%;
+		}
+		.branding-head-logo {
+			padding-left: 30px;
+		    padding-right: 30px;
+		}
+		.branding-head-logo:after {
+			width: 100%;
+		}
+
+		.brand-standards h2 {
+			/*margin-bottom: 0;*/
+			color: #fff;
+			font-size: 2.5em;
+		}
+
+		.side-nav {
+			width: 25%;
+			clear: both;
+			position: fixed;
+			height: 100%;
+		}
+		.side-nav li {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		.side-nav.fixed {
+			position: fixed;
+		}
+
+		.brand-standards h2 {
+			margin: 0;
+			display: inline-block;
+		}
+		.brand-standards a {
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			bottom: 2em;
+		}
+		.navigation-menu {
+			display: inline-block;
+			width: 100%;
+		}
+
+		.navigation-menu .container {
+			width: 100%;
+		}
+
+		footer .legal-content p {
+		    width: 65%;
+		    display: inline-block;
+		}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
